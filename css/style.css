@@ -56,18 +56,43 @@ footer {
 form#search-form {
 	display: grid;
 	grid-template:
-		"search-bar search-bar" auto
+		"search-area search-area" auto
 		"google-button lucky-button" auto
 		/ auto auto;
 	justify-content: center;
 	align-content: center;	
 }
 
-#search-bar {
-	grid-area: search-bar;
+#search-area {
+	grid-area: search-area;
+	background-color: white;
+	border: 1px solid transparent;
+  	border-image: linear-gradient(to bottom, white , grey) 30% round;
 	justify-self: center; 
 	width: 230%;
 	margin-bottom: 15%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+
+#search-bar {
+	height: 30px;
+	width: 90%;
+	border: none;
+	vertical-align: middle;
+}
+
+#search-bar:focus {
+	outline-style:none;
+	box-shadow:none;
+	border-color:transparent;
+}
+
+#voice-search {
+	height: 24px;
+	width: 24px;
+	vertical-align: middle;
 }
 
 .button{
