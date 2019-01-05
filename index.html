@@ -8,11 +8,10 @@
 <body>
 
 	<header>
-		<a href="_blank">Gmail</a>
-		<a href="_blank">Images</a>
-		<img src="TODO" alt="Google Apps">
-		<img src="TODO" alt="Google notifications">
-		<img src="TODO" alt="User profile image">
+		<a href="https://www.google.com/gmail/">Gmail</a>
+		<a href="https://images.google.com/">Images</a>
+		<a href="https://www.google.com/intl/en/about/products/"><img src="./images/google_apps.png" alt="Google Apps"></a>
+		<button id="sign-in-button">Sign in</button>
 	</header>
 
 	<main>
@@ -20,25 +19,34 @@
 					<img src="./images/google_logo.png" alt="Google Logo">
 		</div>
 		<div class="search">
-			<form id="search-form">
+			<form id="search-form" action="http://www.google.com/search" method="GET">
 				<div id="search-area">
-					<input id="search-bar" type="text" name="search">
-					<img id="voice-search" src="./images/google_search_by_voice.png">
+					<input id="search-bar" type="text" name="q">
+					<img id="voice-search" src="./images/google_search_by_voice.png" alt="search google by voice">
 				</div>
-				<input class="button google-button" type="submit" value="Google Search">
 				<input class="button lucky-button" type="submit" value="I'm Feeling Lucky">
+				<input class="button google-button" type="submit" value="Google Search">
 			</form>
 		</div>
 		<div class="language">
-			<p>Google offered in: <a href="_blank">Türkçe</a></p>
+			<p>Google offered in: <a>Türkçe</a></p>
 		</div>
 	</main>
 
 	<footer>
-		<hr>
-		<div>TEST1</div>
-		<hr>
-		<div>TEST2</div>
+		<div class="footer-country">
+			<p class="country">Turkey</p>
+		</div>
+		<div class="footer-left">
+			<a href="https://ads.google.com/intl/en/home/" class="link">Advertising</a>
+			<a href="https://www.google.com/services/" class="link">Business</a>
+			<a href="https://www.google.com/intl/en_tr/about/" class="link">About</a>
+		</div>
+		<div class="footer-right">
+			<a href="https://policies.google.com/privacy" class="link">Privacy</a>
+			<a href="https://policies.google.com/terms" class="link">Terms</a>
+			<a class="link">Settings</a>
+		</div>
 	</footer>
 
 </body>

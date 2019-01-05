@@ -17,8 +17,56 @@ body {
 
 header {
 	grid-area: header;
-	margin: 2%;
+	margin: 1%;
+	margin-right: 1.3%;
 	text-align: right;
+}
+
+header * {
+	margin-right: 0.7%;
+}
+
+header a {
+	font-size: 13px;
+}
+
+header a:link, header a:visited {
+	color: hsla(0, 0%, 13%, 1);
+	text-decoration: none;
+}
+
+header a:hover, header a:focus {
+	color: hsla(0, 0%, 27%, 1);
+	text-decoration: underline;
+}
+
+header img {
+	width: 15px;
+	height: 15px;
+	opacity: 0.55;
+	vertical-align: middle;
+}
+
+header img:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+#sign-in-button {
+	background-image: linear-gradient(to bottom, hsla(218, 98%, 63%, 1), hsla(218, 80%, 60%, 1));
+	border: 1px solid hsla(217, 89%, 61%, 1);
+	border-radius: 2px;
+	color: hsla(0, 0%, 100%, 1);
+	font-size: 13px;
+	font-weight: 700;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+#sign-in-button:active {
+	background-image: linear-gradient(to bottom,hsla(218, 76%, 56%, 1), hsla(218, 63%, 54%, 1));
 }
 
 main {
@@ -33,11 +81,6 @@ main {
 	justify-content: center;
 	text-align: center;
 	align-content: start;
-}
-
-footer {
-	grid-area: footer;
-	margin: 2%;
 }
 
 .logo {
@@ -73,7 +116,7 @@ form#search-form {
 	margin-bottom: 10%;
 	padding-top: 2%;
 	padding-bottom: 2%;
-	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 1px rgba(0,0,0,0.08);
+	box-shadow: 0 2px 2px 0 hsla(0, 0%, 0%, 0.16), 0 0 1px hsla(0, 0%, 0%, 0.08);
 	border-radius: 4px;
 	border: 1px solid transparent;
 }
@@ -143,22 +186,89 @@ form#search-form {
 	font-size: 13px;
 }
 
-.language a:link {
+.language p a {
+	cursor: pointer;
+}
+
+.language a:link, .language a:visited {
 	color: hsla(245, 73%, 40%, 1);
 	text-decoration: none;
 }
 
-.language a:visited {
+.language a:hover, .language a:active {
 	color: hsla(245, 73%, 40%, 1);
+	text-decoration: underline;
+}
+
+footer {
+	grid-area: footer;
+
+	display: grid;
+	grid-template: 
+		"footer-country footer-country" auto
+		"footer-left footer-right" auto
+		/ auto auto;
+}
+
+footer div {
+	border-top: 1px solid hsla(0, 0%, 89%, 1);
+}
+
+.footer-country {
+	grid-area: footer-country;
+	padding-right: 1.5%;
+	padding-left: 1.5%;
+	padding-top: 0.6%;
+	padding-bottom: 0.6%;
+}
+
+.footer-left {
+	grid-area: footer-left;
+	text-align: left;
+	padding-right: 3%;
+	padding-left: 3%;
+	padding-top: 1.2%;
+	padding-bottom: 1.2%;
+}
+
+.footer-right {
+	grid-area: footer-right;
+	text-align: right;
+	padding-right: 1.5%;
+	padding-left: 3%;
+	padding-top: 1.2%;
+	padding-bottom: 1.2%;
+}
+
+footer div a, footer div p{
+	color: hsla(213, 5%, 39%, 1);
+	margin: 0;
+}
+
+footer div a {
+	cursor: pointer;
+}
+
+footer div p.country{
+	font-size: 15px;
+}
+
+footer div a.link{
+	font-size: 13px;	
+	margin-right: 2.5%;
+}
+
+footer a:link, footer a:visited {
+	color: hsla(213, 5%, 39%, 1);
 	text-decoration: none;
 }
 
-.language a:hover {
-	color: hsla(245, 73%, 40%, 1);
+footer a:hover {
+	color: hsla(213, 5%, 39%, 1);
 	text-decoration: underline;
 }
 
-.language a:active {
-	color: hsla(245, 73%, 40%, 1);
+footer a:active {
+	color: hsla(7, 71%, 55%, 1);
 	text-decoration: underline;
-}	
+}
